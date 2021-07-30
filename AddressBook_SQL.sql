@@ -18,7 +18,8 @@ Email varchar(200)
 Insert into Address_Book_Table(FirstName,SecondName,Address,City,State,zip,PhoneNumber,Email) 
 values('Harsha','Vargheese','645 Catherine Street','Bangalore','Karnataka',243001,9842905050,'harsha@gmail.com'),
 ('Rujula','Mathialagan','836 Heritage Rd','Chennai','Tamil Nadu',134002,98402000,'Rujula@gmail.com'),
-('Anita','Yadav','19 Augusta Avenue','Lucknow','Uttar Pradesh',113201,87210505053,'anita@gmail.com');
+('Anita','Yadav','19 Augusta Avenue','Lucknow','Uttar Pradesh',113201,87210505053,'anita@gmail.com'),
+('Pramela','Satesh','356 Newburgh','Bangalore','Karnataka',243001,9842905050,'Pramela@gmail.com');
 select * from Address_Book_Table
 
 ------ UC 4: Ability to Edit Contact Person Based on their Name ------
@@ -31,3 +32,8 @@ where FirstName='Anita'
 Update Address_Book_Table
 set Address='836 Heritage Road'
 where FirstName='Rujula' and LastName='Mathialagan';
+
+------ UC 5: Ability to Delete Contact Person Based on their Name ------
+delete 
+from Address_Book_Table
+where FirstName='Anita' and LastName='Yadav'
